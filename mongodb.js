@@ -13,7 +13,7 @@ const databaseName = 'task-manager'
 // console.log(id.id.length)
 // console.log(id.toHexString().length)
 
-MongoClient.connect(process.env.MONGODB_URL, { useNewUrlParser: true }, (error, client) => {
+MongoClient.connect('mongodb://127.0.0.1:27017', { useNewUrlParser: true }, (error, client) => {
     if (error) {
         return console.log('Unable to connect to database')
     }
